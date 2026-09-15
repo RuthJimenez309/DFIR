@@ -6,7 +6,7 @@ Este proyecto simula una investigación forense correlacionada frente a una intr
 * OS_Artifacts/: Parsing profundo del Registro de Windows, Prefetch y logs de eventos EVTX (Simulado).
 * Consolidated_Report/: Informes tecnicos y cronología unificada de los hallazgos.
 
-## ?? Hallazgos Clave
+## Hallazgos Clave
 1. **Red:** Exfiltración de credenciales en texto plano mediante HTTP y descarga del binario malicioso.
 2. **Memoria:** Inyección de código detectada en el proceso legítimo svchost.exe (PID 1044).
 3. **Host:** Persistencia mediante llaves de registro y correlación horaria mediante análisis.

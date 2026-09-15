@@ -1,0 +1,16 @@
+======================================================================
+[DFIR DÍA 13] - REPORTE DE EXTRACCIÓN DE RED: PROJECT OVERLORD
+======================================================================
+[+] IP de la Víctima: 192.168.1.45
+[+] IP del Atacante (C2 Server): 185.220.101[.]5
+[+] Protocolo de Intrusión detectado: HTTP / Puerto 80
+
+[+] Credenciales Interceptadas (Filtro: http.request.method == "POST"):
+    - URL de Login: http://192.168.1
+    - Usuario: srv_admin
+    - Contraseña expuesta: P@ssw0rdF0r3ns1cs2026!
+
+[+] Objeto Reconstruido desde el flujo TCP (Filtro: http.server):
+    - Archivo: payload_compromised.exe
+    - Hash MD5 Simulado: 4a7d1ed414474e4033ac29ccb8653d9b
+======================================================================

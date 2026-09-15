@@ -1,0 +1,11 @@
+Memory_Dumps/*.raw
+Memory_Dumps/*.dmp
+Network_PCAP/*.pcap
+Network_PCAP/*.pcapng
+Network_PCAP/*.exe
+OS_Artifacts/*.evtx
+OS_Artifacts/*.pf
+# Logs y temporales del sistema
+*.log
+.DS_Store
+Thumbs.db

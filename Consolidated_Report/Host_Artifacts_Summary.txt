@@ -1,0 +1,22 @@
+======================================================================
+[DFIR DÍA 13] - REPORTE DE ARTEFACTOS DEL SISTEMA (HOST FORENSICS)
+======================================================================
+[+] Archivos Analizados: Security.evtx, PAYLOAD_COMPROMISED.pf
+
+[+] Evidencia en Archivos Prefetch (.pf):
+    - Archivo Executable: PAYLOAD_COMPROMISED.EXE
+    - Fecha/Hora de Primera Ejecución: 14/09/2026 21:15:02 UTC
+    - Fecha/Hora de Última Ejecución: 14/09/2026 21:22:40 UTC
+    - Conteo de Ejecuciones (Run Count): 3 veces
+    - Volúmenes Modificados: \VOLUME{01d...}\Users\srv_admin\Downloads
+
+[+] Evidencia en Registros de Eventos Windows (EVTX - Log de Seguridad):
+    - ID de Evento: 4624 (Análisis de Logon Exitoso)
+    - Tipo de Logon: Tipo 3 (Network Logon - Acceso Remoto)
+    - Cuenta Comprometida: srv_admin
+    - Dirección de Red de Origen: 185.220.101.5 (Coincide con IoC de Red)
+
+[+] Persistencia en el Registro de Windows (Software Hive):
+    - Llave afectada: HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+    - Valor inyectado: "OverlordUpdater" -> C:\Users\srv_admin\Downloads\payload_compromised.exe
+======================================================================

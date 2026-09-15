@@ -1,0 +1,21 @@
+======================================================================
+[DFIR DÍA 13] - INFORME EJECUTIVO CONSOLIDADO: PROJECT OVERLORD
+======================================================================
+Analista: Ruth | Fecha: 14/09/2026 | Estado: Caso Resuelto
+
+I. LÍNEA DE TIEMPO DE LA INTRUSIÓN (TIMELINE CORRELACIONADO)
+----------------------------------------------------------------------
+[21:14:00 UTC] - RED: El atacante se conecta desde la IP externa 185.220.101.5. Exfiltra y compromete credenciales de la cuenta 'srv_admin' mediante un POST HTTP plano.
+[21:14:30 UTC] - RED: Se detecta la descarga del payload malicioso 'payload_compromised.exe' desde el servidor C2.
+[21:15:02 UTC] - HOST (Prefetch): Primera ejecución registrada en disco de 'PAYLOAD_COMPROMISED.EXE' con privilegios de administrador.
+[21:15:10 UTC] - MEMORIA (Volatility): El malware realiza una inyección de código de proceso oculta en 'svchost.exe' (PID 1044) bajo el estado PAGE_EXECUTE_READWRITE, evadiendo defensas locales.
+[21:15:35 UTC] - HOST (Registro): El proceso inyectado escribe una llave de persistencia en el registro bajo el nombre 'OverlordUpdater'.
+[21:22:40 UTC] - HOST (Prefetch): Última ejecución registrada (Run Count: 3). Comienza el cifrado masivo de archivos (Ransomware activo).
+
+II. ENFOQUE DE ENTREVISTA CORPORATIVA (PREGUNTAS CLAVE PARA SRV_ADMIN)
+----------------------------------------------------------------------
+Basado en los artefactos correlacionados, el administrador de la cuenta 'srv_admin' debe ser entrevistado bajo los siguientes ejes:
+1. Reutilización de Credenciales: ¿Utilizaba la contraseña 'P@ssw0rdF0r3ns1cs2026!' en algún portal externo o foro público que pudo sufrir una brecha?
+2. Accesos Remotos: ¿Reconoce haber iniciado sesión o realizado mantenimiento en el servidor web el día 14/09/2026 a las 21:14 UTC desde una red externa o sin VPN corporativa?
+3. Descargas Inusuales: ¿Recuerda haber descargado o aprobado alguna actualización manual de software ejecutable desde un sitio no oficial durante su turno?
+======================================================================

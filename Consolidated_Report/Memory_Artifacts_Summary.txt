@@ -1,0 +1,18 @@
+======================================================================
+[DFIR DÍA 13] - REPORTE DE ANÁLISIS DE MEMORIA RAM (VOLATILITY)
+======================================================================
+[+] Archivo analizado: win_dump.raw
+[+] Perfil detectado de manera automática: Windows 10 x64
+
+[+] Proceso Sospechoso Identificado (windows.pslist / windows.pstree):
+    - Nombre del Proceso: payload_comp.exe
+    - PID (Process ID): 4824
+    - PPID (Parent Process ID): 3120 (Nació desde explorer.exe)
+    - Ruta en Disco: C:\Users\srv_admin\Downloads\payload_compromised.exe
+
+[+] Alertas de Inyección de Código (windows.malfind):
+    - Proceso Afectado: svchost.exe (PID: 1044)
+    - Sección de Memoria detectada: 0x00007FF7B3D20000
+    - Protección de Memoria: PAGE_EXECUTE_READWRITE (Inyección Clásica)
+    - Firma de Malware: Cabecera MZ detectada en memoria oculta.
+======================================================================
